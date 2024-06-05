@@ -19,17 +19,19 @@ enum PCG {
 //            let b23 = (bit32 >> 9) & 0b11111111111111111111111
 //            return Float32(sign: b0 == 0 ? .minus : .plus, exponentBitPattern: UInt(b8), significandBitPattern: b23)
 //        }
-        /// Produces random `Float32` in `0...1` range.
-        mutating func randomFloat32() -> Float32 {
-            (Float32(random()) / Self.uInt32MaxInFloat32)
+        
+        /// Produces random `Scalar` in `0...1` range.
+        mutating func randomScalar() -> Scalar {
+            (Scalar(random()) / Self.uInt32MaxInScalar)
         }
-        private static let uInt32MaxInFloat32 = Float32(UInt32.max)
+        private static let uInt32MaxInScalar = Scalar(UInt32.max)
+        
         /// Produces random `Vector3` with all components in `0...1` range.
         mutating func randomVector3() -> Vector3 {
             Vector3(
-                randomFloat32(),
-                randomFloat32(),
-                randomFloat32())
+                randomScalar(),
+                randomScalar(),
+                randomScalar())
         }
     }
 //    static func hash(_ value: UInt32) -> UInt32 {

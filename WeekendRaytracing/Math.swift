@@ -9,25 +9,21 @@ typealias Point3 = SIMD3<Scalar>
 typealias Color = Vector3
 typealias Vector4 = SIMD4<Scalar>
 
-func dot(_ a: Vector3, _ b: Vector3) -> Scalar {
-    simd.dot(a, b)
-}
-
 struct Ray {
     var origin: Vector3
     /// Should always be normalized.
     var direction: UnitVector3
     
-    func at(_ time: Float32) -> Vector3 {
+    func at(_ time: Scalar) -> Vector3 {
         origin + (direction.vector * time)
     }
 }
 
 extension Ray {
-    func nearestHitWithAnything(in space: Space) -> Hit? {
+    func nearestHitWithAnything(in space: borrowing Space, at time: Time) -> Hit? {
         var nearestHit: Hit?
         for sphere in space.spheres {
-            if let newHit = hit(with: sphere) {
+            if let newHit = hit(with: sphere, at: time) {
                 if let oldHit = nearestHit {
                     if abs(newHit.distance) < abs(oldHit.distance) {
                         nearestHit = newHit
@@ -40,8 +36,9 @@ extension Ray {
         }
         return nearestHit
     }
-    func hit(with sphere: Sphere) -> Hit? {
-        let oc = sphere.center - origin
+    func hit(with sphere: Sphere, at time: Time) -> Hit? {
+        let ct = sphere.motion.sample(at: time)
+        let oc = ct - origin
         let a = direction.vector.lengthSquared
         let h = dot(direction.vector, oc)
         let c = oc.lengthSquared - (sphere.radius * sphere.radius)
@@ -51,14 +48,14 @@ extension Ray {
         /// We consider hitting only on forward direction of th ray.
         guard t > 0 else { return nil }
         let p = origin + (direction.vector * t)
-        let n = (p - sphere.center).unit
+        let n = (p - ct).unit
         return Hit(distance: t, point: p, normal: n, material: sphere.material)
     }
 }
 
 struct Hit {
     /// Distance from `Ray.origin` to `Intersection.point`.
-    var distance: Float32
+    var distance: Scalar
     var point: Vector3
     /// Surface normal direction vector. Always a unit vector.
     var normal: UnitVector3
@@ -68,7 +65,7 @@ struct Hit {
 struct UnitVector3 {
     var vector: Vector3
     init(_ vector: Vector3) {
-        assert(abs(vector.lengthSquared.distance(to: 1)) < .ulpOfOne)
+        assert(abs(vector.lengthSquared.distance(to: 1)) < 0.001)
         self.vector = vector
     }
     
@@ -84,22 +81,24 @@ struct UnitVector3 {
 
 extension Scalar {
     func clamped(in range: ClosedRange<Self>) -> Self {
-        if self < range.lowerBound { return range.lowerBound }
-        if self > range.upperBound { return range.upperBound }
-        return self
+        simd_clamp(self, range.lowerBound, range.upperBound)
     }
 }
 
-extension Vector3 {
+extension SIMD3 where Scalar == Float32 {
     var unit: UnitVector3 {
-        UnitVector3(simd_normalize(self))
+        UnitVector3(simd_fast_normalize(self))
     }
     
-    var lengthSquared: Float32 {
-        (x * x) + (y * y) + (z * z)
+    var lengthSquared: Scalar {
+        simd_length_squared(self)
     }
-        
+
     static prefix func - (_ a: Self) -> Self {
-        Self(-a.x, -a.y, -a.z)
+        a * -1
+    }
+    
+    static func dot(_ a: Self, _ b: Self) -> Scalar {
+        simd.dot(a, b)
     }
 }
