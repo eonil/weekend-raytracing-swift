@@ -9,7 +9,8 @@
 ///     - And AMX coprocessor is not attached to all CPU cores.
 ///     - Therefore, if we run tasks on multiple cores, the cores will fight for (likely) single AMX coprocessor.
 ///     - Very well explained [here](https://stackoverflow.com/a/69459361/246776).
-func compute(scene: borrowing Scene, into memory: inout ContiguousArray<Pixel>) {
+///     
+func compute1(scene: borrowing Scene, into memory: inout ContiguousArray<Pixel>) {
     var randomMachine = scene.randomMachine
     let uint8MaxInScalar = Scalar(UInt8.max)
     let viewportSize = Vector2(Scalar(scene.viewport.width), Scalar(scene.viewport.height))
@@ -73,6 +74,8 @@ func compute(scene: borrowing Scene, into memory: inout ContiguousArray<Pixel>) 
             guard maxDepth > 0 else { return .zero }
             guard let hit = ray.nearestHitWithAnything(in: scene.space, at: time) else { return skyColor(for: ray) }
             switch hit.material {
+            case .zero:
+                return .zero
             case .constant(let color):
                 return color
             case .distance:

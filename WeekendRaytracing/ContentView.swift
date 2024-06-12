@@ -144,7 +144,7 @@ private extension ContentView {
                     let colorSpace = CGColorSpaceCreateDeviceRGB()
                     var bitmapPixels = ContiguousArray<Pixel>(repeating: Pixel(), count: filmWidth * filmHeight)
                     let start = Date.now
-                    compute(scene: scene, into: &bitmapPixels)
+                    compute1A(scene: scene, into: &bitmapPixels)
                     let end = Date.now
                     bitmapPixels.withUnsafeBufferPointer { bptr in
                         let bitmap = Data(buffer: bptr)

@@ -26,12 +26,25 @@ enum PCG {
         }
         private static let uInt32MaxInScalar = Scalar(UInt32.max)
         
+        /// Produces random `Vector2` with all components in `0...1` range.
+        mutating func randomVector2() -> Vector2 {
+            Vector2(
+                randomScalar(),
+                randomScalar())
+        }
         /// Produces random `Vector3` with all components in `0...1` range.
         mutating func randomVector3() -> Vector3 {
             Vector3(
                 randomScalar(),
                 randomScalar(),
                 randomScalar())
+        }
+        
+        mutating func randomPointVector2(in box: AABB2) -> Vector2 {
+            randomVector2() * (box.max - box.min) + box.min
+        }
+        mutating func randomPointVector3(in box: AABB3) -> Vector3 {
+            randomVector3() * (box.max - box.min) + box.min
         }
     }
 //    static func hash(_ value: UInt32) -> UInt32 {

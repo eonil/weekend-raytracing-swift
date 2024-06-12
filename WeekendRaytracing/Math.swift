@@ -17,6 +17,8 @@ struct Ray {
     func at(_ time: Scalar) -> Vector3 {
         origin + (direction.vector * time)
     }
+    
+    static let zero = Self(origin: .zero, direction: UnitVector3(.zero))
 }
 
 extension Ray {
@@ -102,3 +104,11 @@ extension SIMD3 where Scalar == Float32 {
         simd.dot(a, b)
     }
 }
+
+
+
+
+
+
+
+

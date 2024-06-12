@@ -51,6 +51,7 @@ struct Sphere {
 }
 
 enum Material {
+    case zero
     case constant(Color)
     case distance
     case normal

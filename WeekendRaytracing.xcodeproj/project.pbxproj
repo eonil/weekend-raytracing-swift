@@ -7,24 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D74F79522C10C5D500FBA40D /* _compute2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79512C10C5D500FBA40D /* _compute2.swift */; };
+		D74F79552C11086700FBA40D /* Vector3Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79542C11086700FBA40D /* Vector3Bucket.swift */; };
+		D74F79572C110B9000FBA40D /* ScalarBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79562C110B9000FBA40D /* ScalarBucket.swift */; };
+		D74F79592C110C5C00FBA40D /* RayBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79582C110C5C00FBA40D /* RayBucket.swift */; };
+		D74F795B2C110D1400FBA40D /* UnitVector3Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F795A2C110D1400FBA40D /* UnitVector3Bucket.swift */; };
+		D74F795D2C1180EB00FBA40D /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F795C2C1180EB00FBA40D /* Sample.swift */; };
+		D74F795F2C11813800FBA40D /* SampleBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F795E2C11813800FBA40D /* SampleBucket.swift */; };
+		D74F79612C11859300FBA40D /* compute1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79602C11859300FBA40D /* compute1.swift */; };
+		D74F79632C12141C00FBA40D /* compute1A.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79622C12141C00FBA40D /* compute1A.swift */; };
+		D74F79652C1216F300FBA40D /* AABB3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79642C1216F300FBA40D /* AABB3.swift */; };
+		D74F79672C12171F00FBA40D /* AABB2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F79662C12171F00FBA40D /* AABB2.swift */; };
+		D74F796A2C155DA000FBA40D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D74F79692C155DA000FBA40D /* README.md */; };
 		D77B08002C0E3AA000072C31 /* WeekendRaytracingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B07FF2C0E3AA000072C31 /* WeekendRaytracingApp.swift */; };
 		D77B08022C0E3AA000072C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B08012C0E3AA000072C31 /* ContentView.swift */; };
 		D77B08042C0E3AA100072C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77B08032C0E3AA100072C31 /* Assets.xcassets */; };
 		D77B08082C0E3AA100072C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77B08072C0E3AA100072C31 /* Preview Assets.xcassets */; };
-		D7CDFEE92C0F6E8100C265E0 /* compute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDFEE82C0F6E8100C265E0 /* compute.swift */; };
+		D7CDFEE92C0F6E8100C265E0 /* compute2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDFEE82C0F6E8100C265E0 /* compute2.swift */; };
 		D7CDFEEB2C0FAC2700C265E0 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDFEEA2C0FAC2700C265E0 /* Scene.swift */; };
 		D7CDFEED2C0FB0AA00C265E0 /* PCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDFEEC2C0FB0AA00C265E0 /* PCG.swift */; };
 		D7CDFEEF2C0FBE0E00C265E0 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDFEEE2C0FBE0E00C265E0 /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D74F79512C10C5D500FBA40D /* _compute2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _compute2.swift; sourceTree = "<group>"; };
+		D74F79542C11086700FBA40D /* Vector3Bucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector3Bucket.swift; sourceTree = "<group>"; };
+		D74F79562C110B9000FBA40D /* ScalarBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalarBucket.swift; sourceTree = "<group>"; };
+		D74F79582C110C5C00FBA40D /* RayBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayBucket.swift; sourceTree = "<group>"; };
+		D74F795A2C110D1400FBA40D /* UnitVector3Bucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitVector3Bucket.swift; sourceTree = "<group>"; };
+		D74F795C2C1180EB00FBA40D /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		D74F795E2C11813800FBA40D /* SampleBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBucket.swift; sourceTree = "<group>"; };
+		D74F79602C11859300FBA40D /* compute1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compute1.swift; sourceTree = "<group>"; };
+		D74F79622C12141C00FBA40D /* compute1A.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compute1A.swift; sourceTree = "<group>"; };
+		D74F79642C1216F300FBA40D /* AABB3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AABB3.swift; sourceTree = "<group>"; };
+		D74F79662C12171F00FBA40D /* AABB2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AABB2.swift; sourceTree = "<group>"; };
+		D74F79692C155DA000FBA40D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D77B07FC2C0E3AA000072C31 /* WeekendRaytracing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendRaytracing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77B07FF2C0E3AA000072C31 /* WeekendRaytracingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendRaytracingApp.swift; sourceTree = "<group>"; };
 		D77B08012C0E3AA000072C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D77B08032C0E3AA100072C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D77B08052C0E3AA100072C31 /* WeekendRaytracing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeekendRaytracing.entitlements; sourceTree = "<group>"; };
 		D77B08072C0E3AA100072C31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D7CDFEE82C0F6E8100C265E0 /* compute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compute.swift; sourceTree = "<group>"; };
+		D7CDFEE82C0F6E8100C265E0 /* compute2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compute2.swift; sourceTree = "<group>"; };
 		D7CDFEEA2C0FAC2700C265E0 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		D7CDFEEC2C0FB0AA00C265E0 /* PCG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCG.swift; sourceTree = "<group>"; };
 		D7CDFEEE2C0FBE0E00C265E0 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
@@ -41,9 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D74F79532C11085E00FBA40D /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				D74F79682C12177000FBA40D /* Random */,
+				D74F79562C110B9000FBA40D /* ScalarBucket.swift */,
+				D74F79542C11086700FBA40D /* Vector3Bucket.swift */,
+				D74F795A2C110D1400FBA40D /* UnitVector3Bucket.swift */,
+				D74F79582C110C5C00FBA40D /* RayBucket.swift */,
+				D74F795E2C11813800FBA40D /* SampleBucket.swift */,
+				D74F79662C12171F00FBA40D /* AABB2.swift */,
+				D74F79642C1216F300FBA40D /* AABB3.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		D74F79682C12177000FBA40D /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				D7CDFEEC2C0FB0AA00C265E0 /* PCG.swift */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
 		D77B07F32C0E3A9F00072C31 = {
 			isa = PBXGroup;
 			children = (
+				D74F79692C155DA000FBA40D /* README.md */,
 				D77B07FE2C0E3AA000072C31 /* WeekendRaytracing */,
 				D77B07FD2C0E3AA000072C31 /* Products */,
 			);
@@ -62,10 +110,14 @@
 			children = (
 				D77B07FF2C0E3AA000072C31 /* WeekendRaytracingApp.swift */,
 				D77B08012C0E3AA000072C31 /* ContentView.swift */,
-				D7CDFEE82C0F6E8100C265E0 /* compute.swift */,
+				D74F79602C11859300FBA40D /* compute1.swift */,
+				D74F79622C12141C00FBA40D /* compute1A.swift */,
+				D7CDFEE82C0F6E8100C265E0 /* compute2.swift */,
+				D74F79512C10C5D500FBA40D /* _compute2.swift */,
 				D7CDFEEA2C0FAC2700C265E0 /* Scene.swift */,
-				D7CDFEEC2C0FB0AA00C265E0 /* PCG.swift */,
 				D7CDFEEE2C0FBE0E00C265E0 /* Math.swift */,
+				D74F795C2C1180EB00FBA40D /* Sample.swift */,
+				D74F79532C11085E00FBA40D /* Math */,
 				D77B08032C0E3AA100072C31 /* Assets.xcassets */,
 				D77B08052C0E3AA100072C31 /* WeekendRaytracing.entitlements */,
 				D77B08062C0E3AA100072C31 /* Preview Content */,
@@ -139,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74F796A2C155DA000FBA40D /* README.md in Resources */,
 				D77B08082C0E3AA100072C31 /* Preview Assets.xcassets in Resources */,
 				D77B08042C0E3AA100072C31 /* Assets.xcassets in Resources */,
 			);
@@ -151,10 +204,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74F79552C11086700FBA40D /* Vector3Bucket.swift in Sources */,
+				D74F795D2C1180EB00FBA40D /* Sample.swift in Sources */,
+				D74F795B2C110D1400FBA40D /* UnitVector3Bucket.swift in Sources */,
 				D7CDFEED2C0FB0AA00C265E0 /* PCG.swift in Sources */,
+				D74F79522C10C5D500FBA40D /* _compute2.swift in Sources */,
 				D7CDFEEB2C0FAC2700C265E0 /* Scene.swift in Sources */,
-				D7CDFEE92C0F6E8100C265E0 /* compute.swift in Sources */,
+				D7CDFEE92C0F6E8100C265E0 /* compute2.swift in Sources */,
+				D74F795F2C11813800FBA40D /* SampleBucket.swift in Sources */,
+				D74F79612C11859300FBA40D /* compute1.swift in Sources */,
 				D77B08022C0E3AA000072C31 /* ContentView.swift in Sources */,
+				D74F79672C12171F00FBA40D /* AABB2.swift in Sources */,
+				D74F79592C110C5C00FBA40D /* RayBucket.swift in Sources */,
+				D74F79652C1216F300FBA40D /* AABB3.swift in Sources */,
+				D74F79572C110B9000FBA40D /* ScalarBucket.swift in Sources */,
+				D74F79632C12141C00FBA40D /* compute1A.swift in Sources */,
 				D77B08002C0E3AA000072C31 /* WeekendRaytracingApp.swift in Sources */,
 				D7CDFEEF2C0FBE0E00C265E0 /* Math.swift in Sources */,
 			);
